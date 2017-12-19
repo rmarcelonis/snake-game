@@ -105,31 +105,30 @@ int main()
             		Tick();
         	}
 
-   // draw
     window.clear();
-
     // draw background
     for (int i = 0; i < widthTiles; i++)
     {
         for (int j = 0; j < heightTiles; j++)
         {
-            sprite1.setPosition(i*size, j*size);
-            window.draw(sprite1);
+            	sprite1.setPosition(i*size, j*size);
+            	window.draw(sprite1);
         }
     }
 
     // draw snake
-	for (int i = 0; i < snakeSize; i++)
+    for (int i = 0; i < snakeSize; i++)
 	{
-	    sprite3.setPosition(s[i].x*size, s[i].y*size);
-	    window.draw(sprite3);
+	    	sprite3.setPosition(s[i].x*size, s[i].y*size);
+	    	window.draw(sprite3);
 	}
 
-	// draw fruit
-	sprite2.setPosition(f.x*size,  f.y*size);
-	window.draw(sprite2);
-
-	window.display();
-	}
+   // draw fruit
+    sprite2.setPosition(f.x*size,  f.y*size);
+    window.draw(sprite2);
+    window.display();
+	 
+    }
+	
     return 0;
 }
