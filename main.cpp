@@ -76,16 +76,16 @@ int main()
 	Sprite sprite1(t1), sprite2(t2), sprite3(t3);
 
 	Clock clock;
-    float timer = 0, delay = 0.1;
+    	float timer = 0, delay = 0.1;
 
 	f.x = 0;
-    f.y = 0;
+    	f.y = 0;
 
     while (window.isOpen())
     {
 		float time = clock.getElapsedTime().asSeconds();
 		clock.restart();
-        timer += time;
+        	timer += time;
 
         Event e;
         while (window.pollEvent(e))
@@ -95,15 +95,15 @@ int main()
 		}
 
 		if (Keyboard::isKeyPressed(Keyboard::Left)) { moveDir = 1; }
-	    if (Keyboard::isKeyPressed(Keyboard::Right)){ moveDir = 2; }
-	    if (Keyboard::isKeyPressed(Keyboard::Up))   { moveDir = 3; }
+	    	if (Keyboard::isKeyPressed(Keyboard::Right)){ moveDir = 2; }
+	    	if (Keyboard::isKeyPressed(Keyboard::Up))   { moveDir = 3; }
 		if (Keyboard::isKeyPressed(Keyboard::Down)) { moveDir = 0; }
 
 		if (timer > delay)
-        {
-            timer = 0;
-            Tick();
-        }
+        	{
+            		timer = 0;
+            		Tick();
+        	}
 
    // draw
     window.clear();
@@ -131,6 +131,5 @@ int main()
 
 	window.display();
 	}
-
     return 0;
 }
